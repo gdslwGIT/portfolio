@@ -7,6 +7,7 @@ class HomePage:
         self.web_inputs_button = page.locator('a[href="/inputs"].btn')
         self.test_login_page_button = page.locator('a[href="/login"].btn')
         self.test_register_page_button = page.locator('a[href="/register"].btn')
+        self.forgot_password_button = page.locator('a[href="/forgot-password"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -16,3 +17,7 @@ class HomePage:
         
     def click_register_page(self):
         self.test_register_page_button.click()
+
+    def click_forgot_password(self):
+        self.forgot_password_button.click()
+        

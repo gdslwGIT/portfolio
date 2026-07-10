@@ -1,9 +1,13 @@
 import pytest
+import urllib.request
+import json
+import time
 from playwright.sync_api import Page
 from pages.home_page import HomePage
 from pages.web_inputs_page import WebInputsPage
 from pages.login_page import LoginPage
 from pages.register_page import RegisterPage
+from pages.forgot_password_page import ForgotPasswordPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -27,3 +31,45 @@ def login_page(page: Page) -> LoginPage:
 @pytest.fixture
 def register_page(page: Page) -> RegisterPage:
     return RegisterPage(page)
+
+@pytest.fixture
+def forgot_password_page(page: Page) -> ForgotPasswordPage:
+    return ForgotPasswordPage(page)
+    
+
+
+
+@pytest.fixture
+def mailbox():
+    return GuerillaMail()
+
+class GuerillaMail:
+    def __init__(self):
+        req = urllib.request.Request("https://api.guerrillamail.com/ajax.php?f=get_email_address", headers={'User-Agent': 'Mozilla/5.0'})
+        response = urllib.request.urlopen(req)
+        data = json.loads(response.read().decode())
+        self.email = data["email_addr"]
+        self.sid_token = data["sid_token"]
+
+    def check_email(self):
+        req = urllib.request.Request(f"https://api.guerrillamail.com/ajax.php?f=check_email&seq=0&sid_token={self.sid_token}", headers={'User-Agent': 'Mozilla/5.0'})
+        response = urllib.request.urlopen(req)
+        data = json.loads(response.read().decode())
+        return data.get("list", [])
+    
+    def get_mail_body(self, email_id):
+        req = urllib.request.Request(f"https://api.guerrillamail.com/ajax.php?f=fetch_email&email_id={email_id}&sid_token={self.sid_token}", headers={'User-Agent': 'Mozilla/5.0'})
+        response = urllib.request.urlopen(req)
+        data = json.loads(response.read().decode())
+        return data.get("mail_body", "")
+
+    def wait_for_mail(self, timeout=15):
+        start_time = time.time()
+        while time.time() - start_time < timeout:
+            emails = self.check_email()
+            if len(emails) > 1:
+                return emails
+            time.sleep(1)
+        raise TimeoutError("No mail received within timeout")
+    
+    
