@@ -8,6 +8,7 @@ from pages.web_inputs_page import WebInputsPage
 from pages.login_page import LoginPage
 from pages.register_page import RegisterPage
 from pages.forgot_password_page import ForgotPasswordPage
+from pages.otp_page import OtpPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -36,7 +37,9 @@ def register_page(page: Page) -> RegisterPage:
 def forgot_password_page(page: Page) -> ForgotPasswordPage:
     return ForgotPasswordPage(page)
     
-
+@pytest.fixture
+def otp_page(page: Page) -> OtpPage:
+    return OtpPage(page)
 
 
 @pytest.fixture
