@@ -10,6 +10,7 @@ from pages.register_page import RegisterPage
 from pages.forgot_password_page import ForgotPasswordPage
 from pages.otp_page import OtpPage
 from pages.dynamic_table_page import DynamicTablePage
+from pages.dynamic_pagination_table_page import DynamicPaginationTablePage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -45,6 +46,10 @@ def otp_page(page: Page) -> OtpPage:
 @pytest.fixture
 def dynamic_table_page(page: Page) -> DynamicTablePage:
     return DynamicTablePage(page)
+
+@pytest.fixture
+def dynamic_pagination_table_page(page: Page) -> DynamicPaginationTablePage:
+    return DynamicPaginationTablePage(page)
 
 
 @pytest.fixture
