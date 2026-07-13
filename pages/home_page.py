@@ -11,6 +11,7 @@ class HomePage:
         self.otp_login_button = page.locator('a[href="/otp-login"].btn')
         self.dynamic_table_button = page.locator('a[href="/dynamic-table"].btn')
         self.dynamic_pagination_table_button = page.locator('a[href="/dynamic-pagination-table"].btn')
+        self.locators_button = page.locator('a[href="/locators"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -32,3 +33,6 @@ class HomePage:
     
     def click_dynamic_pagination_table(self):
         self.dynamic_pagination_table_button.click()
+
+    def click_locators(self):
+        self.locators_button.click()
