@@ -12,6 +12,7 @@ class HomePage:
         self.dynamic_table_button = page.locator('a[href="/dynamic-table"].btn')
         self.dynamic_pagination_table_button = page.locator('a[href="/dynamic-pagination-table"].btn')
         self.locators_button = page.locator('a[href="/locators"].btn')
+        self.my_browser_button = page.locator('a[href="/my-browser"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -36,3 +37,6 @@ class HomePage:
 
     def click_locators(self):
         self.locators_button.click()
+
+    def click_my_browser(self):
+        self.my_browser_button.click()

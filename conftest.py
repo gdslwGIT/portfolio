@@ -12,6 +12,7 @@ from pages.otp_page import OtpPage
 from pages.dynamic_table_page import DynamicTablePage
 from pages.dynamic_pagination_table_page import DynamicPaginationTablePage
 from pages.locators_page import LocatorsPage
+from pages.my_browser_page import MyBrowserPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -55,6 +56,10 @@ def dynamic_pagination_table_page(page: Page) -> DynamicPaginationTablePage:
 @pytest.fixture
 def locators_page(page: Page) -> LocatorsPage:
     return LocatorsPage(page)
+
+@pytest.fixture
+def my_browser_page(page: Page) -> MyBrowserPage:
+    return MyBrowserPage(page)
 
 
 @pytest.fixture
