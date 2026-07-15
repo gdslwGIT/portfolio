@@ -15,6 +15,7 @@ from pages.locators_page import LocatorsPage
 from pages.my_browser_page import MyBrowserPage
 from pages.radio_buttons_page import RadioButtonsPage
 from pages.drag_and_drop_page import DragAndDropPage
+from pages.drag_and_drop_circles_page import DragAndDropCirclesPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -71,6 +72,9 @@ def radio_buttons_page(page: Page) -> RadioButtonsPage:
 def drag_and_drop_page(page: Page) -> DragAndDropPage:
     return DragAndDropPage(page)
 
+@pytest.fixture
+def drag_and_drop_circles_page(page: Page) -> DragAndDropCirclesPage:
+    return DragAndDropCirclesPage(page)
 
 @pytest.fixture
 def mailbox():
