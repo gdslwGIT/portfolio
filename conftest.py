@@ -14,6 +14,7 @@ from pages.dynamic_pagination_table_page import DynamicPaginationTablePage
 from pages.locators_page import LocatorsPage
 from pages.my_browser_page import MyBrowserPage
 from pages.radio_buttons_page import RadioButtonsPage
+from pages.drag_and_drop_page import DragAndDropPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -65,6 +66,10 @@ def my_browser_page(page: Page) -> MyBrowserPage:
 @pytest.fixture
 def radio_buttons_page(page: Page) -> RadioButtonsPage:
     return RadioButtonsPage(page)
+
+@pytest.fixture
+def drag_and_drop_page(page: Page) -> DragAndDropPage:
+    return DragAndDropPage(page)
 
 
 @pytest.fixture

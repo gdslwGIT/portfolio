@@ -14,6 +14,7 @@ class HomePage:
         self.locators_button = page.locator('a[href="/locators"].btn')
         self.my_browser_button = page.locator('a[href="/my-browser"].btn')
         self.radio_buttons_button = page.locator('a[href="/radio-buttons"].btn')
+        self.drag_and_drop_button = page.locator('a[href="/drag-and-drop"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -44,3 +45,6 @@ class HomePage:
     
     def click_radio_buttons(self):
         self.radio_buttons_button.click()
+
+    def click_drag_and_drop(self):
+        self.drag_and_drop_button.click()
