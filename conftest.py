@@ -16,6 +16,7 @@ from pages.my_browser_page import MyBrowserPage
 from pages.radio_buttons_page import RadioButtonsPage
 from pages.drag_and_drop_page import DragAndDropPage
 from pages.drag_and_drop_circles_page import DragAndDropCirclesPage
+from pages.form_validation_page import FormValidationPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -75,6 +76,10 @@ def drag_and_drop_page(page: Page) -> DragAndDropPage:
 @pytest.fixture
 def drag_and_drop_circles_page(page: Page) -> DragAndDropCirclesPage:
     return DragAndDropCirclesPage(page)
+
+@pytest.fixture
+def form_validation_page(page: Page) -> FormValidationPage:
+    return FormValidationPage(page)
 
 @pytest.fixture
 def mailbox():

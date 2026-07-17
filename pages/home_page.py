@@ -16,6 +16,8 @@ class HomePage:
         self.radio_buttons_button = page.locator('a[href="/radio-buttons"].btn')
         self.drag_and_drop_button = page.locator('a[href="/drag-and-drop"].btn')
         self.drag_and_drop_circles_button = page.locator('a[href="/drag-and-drop-circles"].btn')
+        self.form_validation_button = page.locator('a[href="/form-validation"].btn')
+
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -52,3 +54,6 @@ class HomePage:
     
     def click_drag_and_drop_circles(self):
         self.drag_and_drop_circles_button.click()
+    
+    def click_form_validation(self):
+        self.form_validation_button.click()
