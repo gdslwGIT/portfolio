@@ -17,7 +17,8 @@ from pages.radio_buttons_page import RadioButtonsPage
 from pages.drag_and_drop_page import DragAndDropPage
 from pages.drag_and_drop_circles_page import DragAndDropCirclesPage
 from pages.form_validation_page import FormValidationPage
-from pages.file_uploader_page import FileUploaderPage  
+from pages.file_uploader_page import FileUploaderPage
+from pages.add_remove_page import AddRemovePage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -89,6 +90,10 @@ def mailbox():
 @pytest.fixture
 def file_uploader_page(page: Page) -> FileUploaderPage:
     return FileUploaderPage(page)
+
+@pytest.fixture
+def add_remove_page(page: Page) -> AddRemovePage:
+    return AddRemovePage(page)
 
 class GuerillaMail:
     def __init__(self):
