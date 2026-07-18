@@ -17,6 +17,7 @@ from pages.radio_buttons_page import RadioButtonsPage
 from pages.drag_and_drop_page import DragAndDropPage
 from pages.drag_and_drop_circles_page import DragAndDropCirclesPage
 from pages.form_validation_page import FormValidationPage
+from pages.file_uploader_page import FileUploaderPage  
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -84,6 +85,10 @@ def form_validation_page(page: Page) -> FormValidationPage:
 @pytest.fixture
 def mailbox():
     return GuerillaMail()
+
+@pytest.fixture
+def file_uploader_page(page: Page) -> FileUploaderPage:
+    return FileUploaderPage(page)
 
 class GuerillaMail:
     def __init__(self):

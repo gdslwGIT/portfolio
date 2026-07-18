@@ -17,6 +17,7 @@ class HomePage:
         self.drag_and_drop_button = page.locator('a[href="/drag-and-drop"].btn')
         self.drag_and_drop_circles_button = page.locator('a[href="/drag-and-drop-circles"].btn')
         self.form_validation_button = page.locator('a[href="/form-validation"].btn')
+        self.file_uploader_button = page.locator('a[href="/upload"].btn')
 
 
     def click_web_inputs(self):
@@ -57,3 +58,6 @@ class HomePage:
     
     def click_form_validation(self):
         self.form_validation_button.click()
+
+    def click_file_uploader(self):
+        self.file_uploader_button.click()
