@@ -19,6 +19,8 @@ class HomePage:
         self.form_validation_button = page.locator('a[href="/form-validation"].btn')
         self.file_uploader_button = page.locator('a[href="/upload"].btn')
         self.add_remove_button = page.locator('a[href="/add-remove-elements"].btn')
+        self.download_secure_button = page.locator('a[href="/download-secure"].btn')
+        
 
 
     def click_web_inputs(self):
@@ -65,3 +67,6 @@ class HomePage:
 
     def click_add_remove(self):
         self.add_remove_button.click()
+
+    def click_download_secure(self):
+        self.download_secure_button.click()

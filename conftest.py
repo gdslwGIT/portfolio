@@ -19,6 +19,7 @@ from pages.drag_and_drop_circles_page import DragAndDropCirclesPage
 from pages.form_validation_page import FormValidationPage
 from pages.file_uploader_page import FileUploaderPage
 from pages.add_remove_page import AddRemovePage
+from pages.download_secure_page import DownloadSecurePage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -83,9 +84,6 @@ def drag_and_drop_circles_page(page: Page) -> DragAndDropCirclesPage:
 def form_validation_page(page: Page) -> FormValidationPage:
     return FormValidationPage(page)
 
-@pytest.fixture
-def mailbox():
-    return GuerillaMail()
 
 @pytest.fixture
 def file_uploader_page(page: Page) -> FileUploaderPage:
@@ -94,6 +92,20 @@ def file_uploader_page(page: Page) -> FileUploaderPage:
 @pytest.fixture
 def add_remove_page(page: Page) -> AddRemovePage:
     return AddRemovePage(page)
+
+@pytest.fixture
+def download_secure_page(page: Page) -> DownloadSecurePage:
+    return DownloadSecurePage(page)
+
+
+
+@pytest.fixture
+def browser_context_args(browser_context_args):
+    return{**browser_context_args,"http_credentials":{"username":"admin","password":"admin"}}
+
+@pytest.fixture
+def mailbox():
+    return GuerillaMail()
 
 class GuerillaMail:
     def __init__(self):
