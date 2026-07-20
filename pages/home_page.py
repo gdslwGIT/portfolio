@@ -20,7 +20,7 @@ class HomePage:
         self.file_uploader_button = page.locator('a[href="/upload"].btn')
         self.add_remove_button = page.locator('a[href="/add-remove-elements"].btn')
         self.download_secure_button = page.locator('a[href="/download-secure"].btn')
-        
+        self.notification_message_button = page.locator('a[href="/notification-message"].btn')
 
 
     def click_web_inputs(self):
@@ -70,3 +70,6 @@ class HomePage:
 
     def click_download_secure(self):
         self.download_secure_button.click()
+
+    def click_notification_message(self):
+        self.notification_message_button.click()

@@ -20,6 +20,7 @@ from pages.form_validation_page import FormValidationPage
 from pages.file_uploader_page import FileUploaderPage
 from pages.add_remove_page import AddRemovePage
 from pages.download_secure_page import DownloadSecurePage
+from pages.notification_message_page import NotificationMessagePage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -96,6 +97,10 @@ def add_remove_page(page: Page) -> AddRemovePage:
 @pytest.fixture
 def download_secure_page(page: Page) -> DownloadSecurePage:
     return DownloadSecurePage(page)
+
+@pytest.fixture
+def notification_message_page(page: Page) -> NotificationMessagePage:
+    return NotificationMessagePage(page)
 
 
 
