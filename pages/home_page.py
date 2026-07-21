@@ -21,7 +21,7 @@ class HomePage:
         self.add_remove_button = page.locator('a[href="/add-remove-elements"].btn')
         self.download_secure_button = page.locator('a[href="/download-secure"].btn')
         self.notification_message_button = page.locator('a[href="/notification-message"].btn')
-
+        self.autocomplete_button = page.locator('a[href="/autocomplete"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -73,3 +73,6 @@ class HomePage:
 
     def click_notification_message(self):
         self.notification_message_button.click()
+
+    def click_autocomplete(self):
+        self.autocomplete_button.click()

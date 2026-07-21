@@ -21,6 +21,7 @@ from pages.file_uploader_page import FileUploaderPage
 from pages.add_remove_page import AddRemovePage
 from pages.download_secure_page import DownloadSecurePage
 from pages.notification_message_page import NotificationMessagePage
+from pages.autocomplete_page import AutoCompletePage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -101,6 +102,10 @@ def download_secure_page(page: Page) -> DownloadSecurePage:
 @pytest.fixture
 def notification_message_page(page: Page) -> NotificationMessagePage:
     return NotificationMessagePage(page)
+
+@pytest.fixture
+def autocomplete_page(page: Page) -> AutoCompletePage:
+    return AutoCompletePage(page)
 
 
 
