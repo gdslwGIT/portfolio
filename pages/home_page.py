@@ -22,6 +22,7 @@ class HomePage:
         self.download_secure_button = page.locator('a[href="/download-secure"].btn')
         self.notification_message_button = page.locator('a[href="/notification-message"].btn')
         self.autocomplete_button = page.locator('a[href="/autocomplete"].btn')
+        self.cypress_spies_button = page.locator('a[href="/spies-stubs-clocks"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -76,3 +77,6 @@ class HomePage:
 
     def click_autocomplete(self):
         self.autocomplete_button.click()
+    
+    def click_cypress_spies(self):
+        self.cypress_spies_button.click()

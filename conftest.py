@@ -22,6 +22,7 @@ from pages.add_remove_page import AddRemovePage
 from pages.download_secure_page import DownloadSecurePage
 from pages.notification_message_page import NotificationMessagePage
 from pages.autocomplete_page import AutoCompletePage
+from pages.cypress_spies_page import CypressSpiesPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -106,6 +107,10 @@ def notification_message_page(page: Page) -> NotificationMessagePage:
 @pytest.fixture
 def autocomplete_page(page: Page) -> AutoCompletePage:
     return AutoCompletePage(page)
+
+@pytest.fixture
+def cypress_spies_page(page: Page) -> CypressSpiesPage:
+    return CypressSpiesPage(page)
 
 
 
