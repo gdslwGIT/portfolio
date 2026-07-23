@@ -23,6 +23,7 @@ from pages.download_secure_page import DownloadSecurePage
 from pages.notification_message_page import NotificationMessagePage
 from pages.autocomplete_page import AutoCompletePage
 from pages.cypress_spies_page import CypressSpiesPage
+from pages.challenging_dom_page import ChallengingDomPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -112,6 +113,9 @@ def autocomplete_page(page: Page) -> AutoCompletePage:
 def cypress_spies_page(page: Page) -> CypressSpiesPage:
     return CypressSpiesPage(page)
 
+@pytest.fixture
+def challenging_dom_page(page: Page) -> ChallengingDomPage:
+    return ChallengingDomPage(page)
 
 
 @pytest.fixture
