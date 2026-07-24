@@ -24,6 +24,7 @@ from pages.notification_message_page import NotificationMessagePage
 from pages.autocomplete_page import AutoCompletePage
 from pages.cypress_spies_page import CypressSpiesPage
 from pages.challenging_dom_page import ChallengingDomPage
+from pages.large_deep_dom_page import LargeDeepDomPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -116,6 +117,10 @@ def cypress_spies_page(page: Page) -> CypressSpiesPage:
 @pytest.fixture
 def challenging_dom_page(page: Page) -> ChallengingDomPage:
     return ChallengingDomPage(page)
+
+@pytest.fixture
+def large_deep_dom_page(page: Page) -> LargeDeepDomPage:
+    return LargeDeepDomPage(page)
 
 
 @pytest.fixture

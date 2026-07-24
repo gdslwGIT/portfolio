@@ -24,6 +24,7 @@ class HomePage:
         self.autocomplete_button = page.locator('a[href="/autocomplete"].btn')
         self.cypress_spies_button = page.locator('a[href="/spies-stubs-clocks"].btn')
         self.challenging_dom_button = page.locator('a[href="/challenging-dom"].btn')
+        self.large_deep_dom_button = page.locator('a[href="/large"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -84,3 +85,6 @@ class HomePage:
     
     def click_challenging_dom(self):
         self.challenging_dom_button.click()
+    
+    def click_large_deep_dom(self):
+        self.large_deep_dom_button.click()
