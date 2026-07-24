@@ -25,6 +25,7 @@ from pages.autocomplete_page import AutoCompletePage
 from pages.cypress_spies_page import CypressSpiesPage
 from pages.challenging_dom_page import ChallengingDomPage
 from pages.large_deep_dom_page import LargeDeepDomPage
+from pages.shadow_dom_page import ShadowDomPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -122,6 +123,9 @@ def challenging_dom_page(page: Page) -> ChallengingDomPage:
 def large_deep_dom_page(page: Page) -> LargeDeepDomPage:
     return LargeDeepDomPage(page)
 
+@pytest.fixture
+def shadow_dom_page(page: Page) -> ShadowDomPage:
+    return ShadowDomPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
