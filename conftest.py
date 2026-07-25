@@ -26,6 +26,7 @@ from pages.cypress_spies_page import CypressSpiesPage
 from pages.challenging_dom_page import ChallengingDomPage
 from pages.large_deep_dom_page import LargeDeepDomPage
 from pages.shadow_dom_page import ShadowDomPage
+from pages.typos_page import TyposPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -126,6 +127,10 @@ def large_deep_dom_page(page: Page) -> LargeDeepDomPage:
 @pytest.fixture
 def shadow_dom_page(page: Page) -> ShadowDomPage:
     return ShadowDomPage(page)
+
+@pytest.fixture
+def typos_page(page: Page) -> TyposPage:
+    return TyposPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
