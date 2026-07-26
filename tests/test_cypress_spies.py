@@ -24,7 +24,7 @@ def test_spies_stubs_clocks(page: Page, home: HomePage, cypress_spies_page: Cypr
     expect(cypress_spies_page.feedback_message).to_have_text("Thank you for your feedback!")
     calls = page.evaluate("window.gtag_calls")
     like_call = next((call for call in calls if len(call) > 1 and call[0] == "event" and call[1] == "like"), None)
-    assert like_call is not None, "Событие 'like' не было найдено среди вызовов gtag"
+    assert like_call is not None, "Event 'like' was not found in gtag calls"
     assert like_call[2]["event_label"] == "Like Button"
 
     page.context.grant_permissions(["geolocation"])

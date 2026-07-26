@@ -27,6 +27,7 @@ class HomePage:
         self.large_deep_dom_button = page.locator('a[href="/large"].btn')
         self.shadow_dom_button = page.locator('a[href="/shadowdom"].btn')
         self.typos_button = page.locator('a[href="/typos"].btn')
+        self.my_ip_button = page.locator('a[href="/my-ip"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -96,3 +97,6 @@ class HomePage:
 
     def click_typos(self):
         self.typos_button.click()
+
+    def click_my_ip(self):
+        self.my_ip_button.click()

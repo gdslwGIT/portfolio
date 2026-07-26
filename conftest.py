@@ -27,6 +27,7 @@ from pages.challenging_dom_page import ChallengingDomPage
 from pages.large_deep_dom_page import LargeDeepDomPage
 from pages.shadow_dom_page import ShadowDomPage
 from pages.typos_page import TyposPage
+from pages.my_ip_page import MyIpPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -131,6 +132,10 @@ def shadow_dom_page(page: Page) -> ShadowDomPage:
 @pytest.fixture
 def typos_page(page: Page) -> TyposPage:
     return TyposPage(page)
+
+@pytest.fixture
+def my_ip_page(page: Page) -> MyIpPage:
+    return MyIpPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
