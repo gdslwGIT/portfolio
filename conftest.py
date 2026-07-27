@@ -28,6 +28,7 @@ from pages.large_deep_dom_page import LargeDeepDomPage
 from pages.shadow_dom_page import ShadowDomPage
 from pages.typos_page import TyposPage
 from pages.my_ip_page import MyIpPage
+from pages.broken_images_page import BrokenImagesPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -136,6 +137,10 @@ def typos_page(page: Page) -> TyposPage:
 @pytest.fixture
 def my_ip_page(page: Page) -> MyIpPage:
     return MyIpPage(page)
+
+@pytest.fixture
+def broken_images_page(page: Page) -> BrokenImagesPage:
+    return BrokenImagesPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):

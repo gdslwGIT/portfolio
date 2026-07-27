@@ -28,6 +28,7 @@ class HomePage:
         self.shadow_dom_button = page.locator('a[href="/shadowdom"].btn')
         self.typos_button = page.locator('a[href="/typos"].btn')
         self.my_ip_button = page.locator('a[href="/my-ip"].btn')
+        self.broken_images_button = page.locator('a[href="/broken-images"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -100,3 +101,6 @@ class HomePage:
 
     def click_my_ip(self):
         self.my_ip_button.click()
+
+    def click_broken_images(self):
+        self.broken_images_button.click()
