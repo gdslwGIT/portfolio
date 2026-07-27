@@ -29,6 +29,7 @@ from pages.shadow_dom_page import ShadowDomPage
 from pages.typos_page import TyposPage
 from pages.my_ip_page import MyIpPage
 from pages.broken_images_page import BrokenImagesPage
+from pages.infinite_scroll_page import InfiniteScrollPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -143,6 +144,10 @@ def broken_images_page(page: Page) -> BrokenImagesPage:
     return BrokenImagesPage(page)
 
 @pytest.fixture
+def infinite_scroll_page(page: Page) -> InfiniteScrollPage:
+    return InfiniteScrollPage(page)
+
+@pytest.fixture
 def browser_context_args(browser_context_args):
     return{**browser_context_args,"http_credentials":{"username":"admin","password":"admin"}}
 
@@ -170,7 +175,7 @@ class GuerillaMail:
         data = json.loads(response.read().decode())
         return data.get("mail_body", "")
 
-    def wait_for_mail(self, timeout=15):
+    def wait_for_mail(self, timeout=30):
         start_time = time.time()
         while time.time() - start_time < timeout:
             emails = self.check_email()
