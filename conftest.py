@@ -31,6 +31,7 @@ from pages.my_ip_page import MyIpPage
 from pages.broken_images_page import BrokenImagesPage
 from pages.infinite_scroll_page import InfiniteScrollPage
 from pages.slow_page import SlowPage
+from pages.js_dialogs_page import JsDialogsPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -151,6 +152,10 @@ def infinite_scroll_page(page: Page) -> InfiniteScrollPage:
 @pytest.fixture
 def slow_page(page: Page) -> SlowPage:
     return SlowPage(page)
+
+@pytest.fixture
+def js_dialogs_page(page: Page) -> JsDialogsPage:
+    return JsDialogsPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
