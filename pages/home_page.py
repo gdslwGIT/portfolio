@@ -30,6 +30,7 @@ class HomePage:
         self.my_ip_button = page.locator('a[href="/my-ip"].btn')
         self.broken_images_button = page.locator('a[href="/broken-images"].btn')
         self.infinite_scroll_button = page.locator('a[href="/infinite-scroll"].btn')
+        self.slow_button = page.locator('a[href="/slow"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -108,3 +109,6 @@ class HomePage:
 
     def click_infinite_scroll(self):
         self.infinite_scroll_button.click()
+
+    def click_slow_page(self):
+        self.slow_button.click()
