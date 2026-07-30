@@ -32,6 +32,7 @@ class HomePage:
         self.infinite_scroll_button = page.locator('a[href="/infinite-scroll"].btn')
         self.slow_button = page.locator('a[href="/slow"].btn')
         self.js_dialogs_button = page.locator('a[href="/js-dialogs"].btn')
+        self.js_error_button = page.locator('a[href="/javascript-error"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -116,3 +117,6 @@ class HomePage:
 
     def click_js_dialogs(self):
         self.js_dialogs_button.click()
+
+    def click_js_error(self):
+        self.js_error_button.click()
