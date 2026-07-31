@@ -33,6 +33,8 @@ class HomePage:
         self.slow_button = page.locator('a[href="/slow"].btn')
         self.js_dialogs_button = page.locator('a[href="/js-dialogs"].btn')
         self.js_error_button = page.locator('a[href="/javascript-error"].btn')
+        self.jquery_button = page.locator('a[href="/jqueryui"].btn')
+
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -120,3 +122,6 @@ class HomePage:
 
     def click_js_error(self):
         self.js_error_button.click()
+
+    def click_jquery(self):
+        self.jquery_button.click()

@@ -33,6 +33,7 @@ from pages.infinite_scroll_page import InfiniteScrollPage
 from pages.slow_page import SlowPage
 from pages.js_dialogs_page import JsDialogsPage
 from pages.js_error_page import JsErrorPage
+from pages.jquery_page import JQueryPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -161,6 +162,10 @@ def js_dialogs_page(page: Page) -> JsDialogsPage:
 @pytest.fixture
 def js_error_page(page: Page) -> JsErrorPage:
     return JsErrorPage(page)
+
+@pytest.fixture
+def jquery_page(page: Page) -> JQueryPage:
+    return JQueryPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
