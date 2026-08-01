@@ -34,6 +34,7 @@ from pages.slow_page import SlowPage
 from pages.js_dialogs_page import JsDialogsPage
 from pages.js_error_page import JsErrorPage
 from pages.jquery_page import JQueryPage
+from pages.a_b_page import ABPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -166,6 +167,10 @@ def js_error_page(page: Page) -> JsErrorPage:
 @pytest.fixture
 def jquery_page(page: Page) -> JQueryPage:
     return JQueryPage(page)
+
+@pytest.fixture
+def a_b_page(page: Page) -> ABPage:
+    return ABPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
