@@ -35,6 +35,7 @@ class HomePage:
         self.js_error_button = page.locator('a[href="/javascript-error"].btn')
         self.jquery_button = page.locator('a[href="/jqueryui"].btn')
         self.a_b_button = page.locator('a[href="/abtest"].btn')
+        self.checkboxes_button = page.locator('a[href="/checkboxes"].btn')
 
 
     def click_web_inputs(self):
@@ -129,3 +130,6 @@ class HomePage:
 
     def click_a_b(self):
         self.a_b_button.click()
+
+    def click_checkboxes(self):
+        self.checkboxes_button.click()

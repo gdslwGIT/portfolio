@@ -35,6 +35,7 @@ from pages.js_dialogs_page import JsDialogsPage
 from pages.js_error_page import JsErrorPage
 from pages.jquery_page import JQueryPage
 from pages.a_b_page import ABPage
+from pages.checkboxes_page import CheckBoxPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -171,6 +172,10 @@ def jquery_page(page: Page) -> JQueryPage:
 @pytest.fixture
 def a_b_page(page: Page) -> ABPage:
     return ABPage(page)
+
+@pytest.fixture
+def checkboxes_page(page: Page) -> CheckBoxPage:
+    return CheckBoxPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
