@@ -36,7 +36,7 @@ class HomePage:
         self.jquery_button = page.locator('a[href="/jqueryui"].btn')
         self.a_b_button = page.locator('a[href="/abtest"].btn')
         self.checkboxes_button = page.locator('a[href="/checkboxes"].btn')
-
+        self.context_menu_button = page.locator('a[href="/context-menu"].btn').first
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -133,3 +133,6 @@ class HomePage:
 
     def click_checkboxes(self):
         self.checkboxes_button.click()
+
+    def click_context_menu(self):
+        self.context_menu_button.click()
