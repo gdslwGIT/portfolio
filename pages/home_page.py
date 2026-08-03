@@ -37,6 +37,7 @@ class HomePage:
         self.a_b_button = page.locator('a[href="/abtest"].btn')
         self.checkboxes_button = page.locator('a[href="/checkboxes"].btn')
         self.context_menu_button = page.locator('a[href="/context-menu"].btn').first
+        self.key_presses_button = page.locator('a[href="/key-presses"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -136,3 +137,6 @@ class HomePage:
 
     def click_context_menu(self):
         self.context_menu_button.click()
+
+    def click_key_presses(self):
+        self.key_presses_button.click()
