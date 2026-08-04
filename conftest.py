@@ -38,6 +38,7 @@ from pages.a_b_page import ABPage
 from pages.checkboxes_page import CheckBoxPage
 from pages.context_menu_page import ContextMenuPage
 from pages.key_presses_page import KeyPressesPage
+from pages.dissapearing_elements_page import DissapearingElementsPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -186,6 +187,10 @@ def context_menu_page(page: Page) -> ContextMenuPage:
 @pytest.fixture
 def key_presses_page(page: Page) -> KeyPressesPage:
     return KeyPressesPage(page)
+
+@pytest.fixture
+def dissapearing_elements_page(page: Page) -> DissapearingElementsPage:
+    return DissapearingElementsPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):

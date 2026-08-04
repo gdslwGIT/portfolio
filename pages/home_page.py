@@ -38,7 +38,7 @@ class HomePage:
         self.checkboxes_button = page.locator('a[href="/checkboxes"].btn')
         self.context_menu_button = page.locator('a[href="/context-menu"].btn').first
         self.key_presses_button = page.locator('a[href="/key-presses"].btn')
-
+        self.dissapearing_elements_button = page.locator('a[href="/disappearing-elements"].btn')
     def click_web_inputs(self):
         self.web_inputs_button.click()
     
@@ -140,3 +140,6 @@ class HomePage:
 
     def click_key_presses(self):
         self.key_presses_button.click()
+
+    def click_dissapearing_elements(self):
+        self.dissapearing_elements_button.click()
