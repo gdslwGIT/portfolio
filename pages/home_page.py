@@ -40,6 +40,7 @@ class HomePage:
         self.key_presses_button = page.locator('a[href="/key-presses"].btn')
         self.dissapearing_elements_button = page.locator('a[href="/disappearing-elements"].btn')
         self.dropdown_button = page.locator('a[href="/dropdown"].btn')
+        self.redirector_button = page.locator('a[href="/redirector"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -148,3 +149,6 @@ class HomePage:
 
     def click_dropdown(self):
         self.dropdown_button.click()
+
+    def click_redirector(self):
+        self.redirector_button.click()

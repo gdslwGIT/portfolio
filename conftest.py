@@ -40,6 +40,7 @@ from pages.context_menu_page import ContextMenuPage
 from pages.key_presses_page import KeyPressesPage
 from pages.dissapearing_elements_page import DissapearingElementsPage
 from pages.dropdown_page import DropdownPage
+from pages.redirector_page import RedirectorPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -192,6 +193,10 @@ def key_presses_page(page: Page) -> KeyPressesPage:
 @pytest.fixture
 def dissapearing_elements_page(page: Page) -> DissapearingElementsPage:
     return DissapearingElementsPage(page)
+
+@pytest.fixture
+def redirector_page(page: Page) -> RedirectorPage:
+    return RedirectorPage(page)
 
 @pytest.fixture
 def dropdown_page(page: Page) -> DropdownPage:
