@@ -41,6 +41,7 @@ from pages.key_presses_page import KeyPressesPage
 from pages.dissapearing_elements_page import DissapearingElementsPage
 from pages.dropdown_page import DropdownPage
 from pages.redirector_page import RedirectorPage
+from pages.geolocation_page import GeolocationPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -201,6 +202,10 @@ def redirector_page(page: Page) -> RedirectorPage:
 @pytest.fixture
 def dropdown_page(page: Page) -> DropdownPage:
     return DropdownPage(page)
+
+@pytest.fixture
+def geolocation_page(page: Page) -> GeolocationPage:
+    return GeolocationPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
