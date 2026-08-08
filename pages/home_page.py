@@ -42,6 +42,7 @@ class HomePage:
         self.dropdown_button = page.locator('a[href="/dropdown"].btn')
         self.redirector_button = page.locator('a[href="/redirector"].btn')
         self.geolocation_button = page.locator('a[href="/geolocation"].btn')
+        self.horizontal_slider_button = page.locator('a[href="/horizontal-slider"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -156,3 +157,6 @@ class HomePage:
 
     def click_geolocation(self):
         self.geolocation_button.click()
+
+    def click_horizontal_slider(self):
+        self.horizontal_slider_button.click()
