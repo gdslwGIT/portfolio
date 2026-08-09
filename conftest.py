@@ -43,6 +43,7 @@ from pages.dropdown_page import DropdownPage
 from pages.redirector_page import RedirectorPage
 from pages.geolocation_page import GeolocationPage
 from pages.horizontal_slider_page import HorizontalSliderPage
+from pages.hovers_page import HoversPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -211,6 +212,10 @@ def geolocation_page(page: Page) -> GeolocationPage:
 @pytest.fixture
 def horizontal_slider_page(page: Page) -> HorizontalSliderPage:
     return HorizontalSliderPage(page)
+
+@pytest.fixture
+def hovers_page(page: Page) -> HoversPage:
+    return HoversPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
