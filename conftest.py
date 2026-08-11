@@ -45,6 +45,7 @@ from pages.geolocation_page import GeolocationPage
 from pages.horizontal_slider_page import HorizontalSliderPage
 from pages.hovers_page import HoversPage
 from pages.floating_menu_page import FloatingMenuPage
+from pages.iframe_page import IFramePage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -221,6 +222,10 @@ def hovers_page(page: Page) -> HoversPage:
 @pytest.fixture
 def floating_menu_page(page: Page) -> FloatingMenuPage:
     return FloatingMenuPage(page)
+
+@pytest.fixture
+def iframe_page(page: Page) -> IFramePage:
+    return IFramePage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):

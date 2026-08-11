@@ -45,6 +45,7 @@ class HomePage:
         self.horizontal_slider_button = page.locator('a[href="/horizontal-slider"].btn')
         self.hovers_button = page.locator('a[href="/hovers"].btn')
         self.floating_menu_button = page.locator('a[href="/floating-menu"].btn')
+        self.iframe_button = page.locator('a[href="/iframe"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -168,3 +169,6 @@ class HomePage:
 
     def click_floating_menu(self):
         self.floating_menu_button.click()
+
+    def click_iframe(self):
+        self.iframe_button.click()
