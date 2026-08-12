@@ -46,6 +46,7 @@ from pages.horizontal_slider_page import HorizontalSliderPage
 from pages.hovers_page import HoversPage
 from pages.floating_menu_page import FloatingMenuPage
 from pages.iframe_page import IFramePage
+from pages.windows_page import WindowsPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -226,6 +227,10 @@ def floating_menu_page(page: Page) -> FloatingMenuPage:
 @pytest.fixture
 def iframe_page(page: Page) -> IFramePage:
     return IFramePage(page)
+
+@pytest.fixture
+def windows_page(page: Page) -> WindowsPage:
+    return WindowsPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
