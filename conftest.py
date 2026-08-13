@@ -47,6 +47,7 @@ from pages.hovers_page import HoversPage
 from pages.floating_menu_page import FloatingMenuPage
 from pages.iframe_page import IFramePage
 from pages.windows_page import WindowsPage
+from pages.tables_page import TablesPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -231,6 +232,10 @@ def iframe_page(page: Page) -> IFramePage:
 @pytest.fixture
 def windows_page(page: Page) -> WindowsPage:
     return WindowsPage(page)
+
+@pytest.fixture
+def tables_page(page: Page) -> TablesPage:
+    return TablesPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
