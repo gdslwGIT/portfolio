@@ -48,6 +48,7 @@ from pages.floating_menu_page import FloatingMenuPage
 from pages.iframe_page import IFramePage
 from pages.windows_page import WindowsPage
 from pages.tables_page import TablesPage
+from pages.tooltips_page import TooltipsPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -236,6 +237,10 @@ def windows_page(page: Page) -> WindowsPage:
 @pytest.fixture
 def tables_page(page: Page) -> TablesPage:
     return TablesPage(page)
+
+@pytest.fixture
+def tooltips_page(page: Page) -> TooltipsPage:
+    return TooltipsPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
