@@ -49,6 +49,7 @@ class HomePage:
         self.windows_button = page.locator('a[href="/windows"].btn')
         self.tables_button = page.locator('a[href="/tables"].btn')
         self.tooltips_button = page.locator('a[href="/tooltips"].btn')
+        self.dynamic_content_button = page.locator('a[href="/dynamic-content"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -184,4 +185,7 @@ class HomePage:
 
     def click_tooltips(self):
         self.tooltips_button.click()
+
+    def click_dynamic_content(self):
+        self.dynamic_content_button.click()
         
