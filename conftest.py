@@ -50,6 +50,7 @@ from pages.windows_page import WindowsPage
 from pages.tables_page import TablesPage
 from pages.tooltips_page import TooltipsPage
 from pages.dynamic_content_page import DynamicContentPage
+from pages.dynamic_controls_page import DynamicControlsPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -246,6 +247,10 @@ def tooltips_page(page: Page) -> TooltipsPage:
 @pytest.fixture
 def dynamic_content_page(page: Page) -> DynamicContentPage:
     return DynamicContentPage(page)
+
+@pytest.fixture
+def dynamic_controls_page(page: Page) -> DynamicControlsPage:
+    return DynamicControlsPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
