@@ -51,6 +51,7 @@ from pages.tables_page import TablesPage
 from pages.tooltips_page import TooltipsPage
 from pages.dynamic_content_page import DynamicContentPage
 from pages.dynamic_controls_page import DynamicControlsPage
+from pages.dynamic_loading_page import DynamicLoadingPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -251,6 +252,10 @@ def dynamic_content_page(page: Page) -> DynamicContentPage:
 @pytest.fixture
 def dynamic_controls_page(page: Page) -> DynamicControlsPage:
     return DynamicControlsPage(page)
+
+@pytest.fixture
+def dynamic_loading_page(page: Page) -> DynamicLoadingPage:
+    return DynamicLoadingPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
