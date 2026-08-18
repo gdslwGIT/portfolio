@@ -52,6 +52,7 @@ class HomePage:
         self.dynamic_content_button = page.locator('a[href="/dynamic-content"].btn')
         self.dynamic_controls_button = page.locator('a[href="/dynamic-controls"].btn')
         self.dynamic_loading_button = page.locator('a[href="/dynamic-loading"].btn')
+        self.shifting_content_button = page.locator('a[href="/shifting-content"].btn')
         
 
     def click_web_inputs(self):
@@ -197,4 +198,7 @@ class HomePage:
 
     def click_dynamic_loading(self):
         self.dynamic_loading_button.click()
+
+    def click_shifting_content(self):
+        self.shifting_content_button.click()
         
