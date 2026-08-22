@@ -56,6 +56,7 @@ class HomePage:
         self.dynamic_id_button = page.locator('a[href="/dynamic-id"].btn')
         self.entry_ad_button = page.locator('a[href="/entry-ad"].btn')
         self.exit_intent_button = page.locator('a[href="/exit-intent"].btn')
+        self.contact_button = page.locator('a[href="/contact"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -212,3 +213,7 @@ class HomePage:
 
     def click_exit_intent(self):
         self.exit_intent_button.click()
+
+    def click_contact(self):
+        self.contact_button.click()
+    

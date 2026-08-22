@@ -56,6 +56,7 @@ from pages.shifting_content_page import ShiftingContentPage
 from pages.dynamic_id_page import DynamicIdPage
 from pages.entry_ad_page import EntryAdPage
 from pages.exit_intent_page import ExitIntentPage
+from pages.contact_page import ContactPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -276,6 +277,10 @@ def entry_ad_page(page: Page) -> EntryAdPage:
 @pytest.fixture
 def exit_intent_page(page: Page) -> ExitIntentPage:
     return ExitIntentPage(page)
+
+@pytest.fixture
+def contact_page(page: Page) -> ContactPage:
+    return ContactPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
