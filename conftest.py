@@ -57,10 +57,11 @@ from pages.dynamic_id_page import DynamicIdPage
 from pages.entry_ad_page import EntryAdPage
 from pages.exit_intent_page import ExitIntentPage
 from pages.contact_page import ContactPage
+from pages.google_tracking_events_page import GoogleTrackingEventsPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
-    page.route("**/*google*", lambda route: route.abort())
+    page.route("**/*google*", lambda route: route.continue_() if "expandtesting.com" in route.request.url else route.abort())
     page.goto("https://practice.expandtesting.com/")
 
     yield page
@@ -281,6 +282,10 @@ def exit_intent_page(page: Page) -> ExitIntentPage:
 @pytest.fixture
 def contact_page(page: Page) -> ContactPage:
     return ContactPage(page)
+
+@pytest.fixture
+def google_tracking_events_page(page: Page) -> GoogleTrackingEventsPage:
+    return GoogleTrackingEventsPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
