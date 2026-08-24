@@ -58,6 +58,7 @@ class HomePage:
         self.exit_intent_button = page.locator('a[href="/exit-intent"].btn')
         self.contact_button = page.locator('a[href="/contact"].btn')
         self.google_tracking_events_button = page.locator('a[href="/google-tracking-events"].btn')
+        self.user_profile_link = page.locator('a[href="/user-profile"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -220,4 +221,7 @@ class HomePage:
 
     def click_google_tracking_events(self):
         self.google_tracking_events_button.click()
+
+    def click_user_profile(self):
+        self.user_profile_link.click()
     

@@ -58,6 +58,7 @@ from pages.entry_ad_page import EntryAdPage
 from pages.exit_intent_page import ExitIntentPage
 from pages.contact_page import ContactPage
 from pages.google_tracking_events_page import GoogleTrackingEventsPage
+from pages.user_profile_page import UserProfilePage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -286,6 +287,10 @@ def contact_page(page: Page) -> ContactPage:
 @pytest.fixture
 def google_tracking_events_page(page: Page) -> GoogleTrackingEventsPage:
     return GoogleTrackingEventsPage(page)
+
+@pytest.fixture
+def user_profile_page(page: Page) -> UserProfilePage:
+    return UserProfilePage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
