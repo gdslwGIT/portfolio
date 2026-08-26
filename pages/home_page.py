@@ -60,6 +60,7 @@ class HomePage:
         self.google_tracking_events_button = page.locator('a[href="/google-tracking-events"].btn')
         self.user_profile_link = page.locator('a[href="/user-profile"].btn')
         self.feedback_button = page.locator('a[href="/feedback"].btn')
+        self.scrollbars_button = page.locator('a[href="/scrollbars"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -228,4 +229,7 @@ class HomePage:
 
     def click_feedback(self):
         self.feedback_button.click()
+
+    def click_scrollbars(self):
+        self.scrollbars_button.click()
     
