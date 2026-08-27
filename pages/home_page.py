@@ -61,6 +61,7 @@ class HomePage:
         self.user_profile_link = page.locator('a[href="/user-profile"].btn')
         self.feedback_button = page.locator('a[href="/feedback"].btn')
         self.scrollbars_button = page.locator('a[href="/scrollbars"].btn')
+        self.cookie_alert_button = page.locator('a[href="/cookie-alert"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -232,4 +233,7 @@ class HomePage:
 
     def click_scrollbars(self):
         self.scrollbars_button.click()
+
+    def click_cookie_alert(self):
+        self.cookie_alert_button.click()
     

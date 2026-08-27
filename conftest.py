@@ -61,6 +61,7 @@ from pages.google_tracking_events_page import GoogleTrackingEventsPage
 from pages.user_profile_page import UserProfilePage
 from pages.feedback_page import FeedbackPage
 from pages.scrollbars_page import ScrollbarsPage
+from pages.cookie_alert_page import CookieAlertPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -301,6 +302,10 @@ def feedback_page(page: Page) -> FeedbackPage:
 @pytest.fixture
 def scrollbars_page(page: Page) -> ScrollbarsPage:
     return ScrollbarsPage(page)
+
+@pytest.fixture
+def cookie_alert_page(page: Page) -> CookieAlertPage:
+    return CookieAlertPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
