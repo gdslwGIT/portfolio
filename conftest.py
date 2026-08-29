@@ -63,6 +63,7 @@ from pages.feedback_page import FeedbackPage
 from pages.scrollbars_page import ScrollbarsPage
 from pages.cookie_alert_page import CookieAlertPage
 from pages.http_headers_page import HttpHeadersPage
+from pages.console_logs_page import ConsoleLogsPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -311,6 +312,10 @@ def cookie_alert_page(page: Page) -> CookieAlertPage:
 @pytest.fixture
 def http_headers_page(page: Page) -> HttpHeadersPage:
     return HttpHeadersPage(page)
+
+@pytest.fixture
+def console_logs_page(page: Page) -> ConsoleLogsPage:
+    return ConsoleLogsPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):

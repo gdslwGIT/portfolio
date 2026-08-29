@@ -63,6 +63,7 @@ class HomePage:
         self.scrollbars_button = page.locator('a[href="/scrollbars"].btn')
         self.cookie_alert_button = page.locator('a[href="/cookie-alert"].btn')
         self.http_headers_button = page.locator('a[href="/http-headers"].btn')
+        self.console_logs_button = page.locator('a[href="/console-logs"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -240,3 +241,6 @@ class HomePage:
 
     def click_http_headers(self):
         self.http_headers_button.click()
+
+    def click_console_logs(self):
+        self.console_logs_button.click()
