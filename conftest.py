@@ -64,6 +64,7 @@ from pages.scrollbars_page import ScrollbarsPage
 from pages.cookie_alert_page import CookieAlertPage
 from pages.http_headers_page import HttpHeadersPage
 from pages.console_logs_page import ConsoleLogsPage
+from pages.notes_login_page import NotesLoginPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -316,6 +317,10 @@ def http_headers_page(page: Page) -> HttpHeadersPage:
 @pytest.fixture
 def console_logs_page(page: Page) -> ConsoleLogsPage:
     return ConsoleLogsPage(page)
+
+@pytest.fixture
+def notes_login_page(page: Page) -> NotesLoginPage:
+    return NotesLoginPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
