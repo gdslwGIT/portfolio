@@ -65,6 +65,7 @@ from pages.cookie_alert_page import CookieAlertPage
 from pages.http_headers_page import HttpHeadersPage
 from pages.console_logs_page import ConsoleLogsPage
 from pages.notes_login_page import NotesLoginPage
+from pages.basic_authentication_page import BasicAuthenticationPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -321,6 +322,10 @@ def console_logs_page(page: Page) -> ConsoleLogsPage:
 @pytest.fixture
 def notes_login_page(page: Page) -> NotesLoginPage:
     return NotesLoginPage(page)
+
+@pytest.fixture
+def basic_authentication_page(page: Page) -> BasicAuthenticationPage:
+    return BasicAuthenticationPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):

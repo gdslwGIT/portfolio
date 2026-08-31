@@ -65,6 +65,7 @@ class HomePage:
         self.http_headers_button = page.locator('a[href="/http-headers"].btn')
         self.console_logs_button = page.locator('a[href="/console-logs"].btn')
         self.notes_login_button = page.locator('a[href="/notes/app/login"].btn')
+        self.basic_authentication_button = page.locator('a[href="/basic-auth"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -248,3 +249,7 @@ class HomePage:
 
     def click_notes_login(self):
         self.notes_login_button.click()
+
+    def click_basic_authentication(self):
+        self.basic_authentication_button.click()
+        
