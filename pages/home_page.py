@@ -66,6 +66,7 @@ class HomePage:
         self.console_logs_button = page.locator('a[href="/console-logs"].btn')
         self.notes_login_button = page.locator('a[href="/notes/app/login"].btn')
         self.basic_authentication_button = page.locator('a[href="/basic-auth"].btn')
+        self.digest_authentication_button = page.locator('a[href="/digest-auth"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -225,7 +226,7 @@ class HomePage:
 
     def click_contact(self):
         self.contact_button.click()
-
+    
     def click_google_tracking_events(self):
         self.google_tracking_events_button.click()
 
@@ -252,4 +253,6 @@ class HomePage:
 
     def click_basic_authentication(self):
         self.basic_authentication_button.click()
-        
+
+    def click_digest_authentication(self):
+        self.digest_authentication_button.click()

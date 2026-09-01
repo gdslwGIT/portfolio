@@ -66,6 +66,7 @@ from pages.http_headers_page import HttpHeadersPage
 from pages.console_logs_page import ConsoleLogsPage
 from pages.notes_login_page import NotesLoginPage
 from pages.basic_authentication_page import BasicAuthenticationPage
+from pages.digest_authentication_page import DigestAuthenticationPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -326,6 +327,10 @@ def notes_login_page(page: Page) -> NotesLoginPage:
 @pytest.fixture
 def basic_authentication_page(page: Page) -> BasicAuthenticationPage:
     return BasicAuthenticationPage(page)
+
+@pytest.fixture
+def digest_authentication_page(page: Page) -> DigestAuthenticationPage:
+    return DigestAuthenticationPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
