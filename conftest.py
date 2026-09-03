@@ -68,6 +68,7 @@ from pages.notes_login_page import NotesLoginPage
 from pages.basic_authentication_page import BasicAuthenticationPage
 from pages.digest_authentication_page import DigestAuthenticationPage
 from pages.random_number_page import RandomNumberPage
+from pages.flaky_test_page import FlakyTestPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -336,6 +337,10 @@ def digest_authentication_page(page: Page) -> DigestAuthenticationPage:
 @pytest.fixture
 def random_number_page(page: Page) -> RandomNumberPage:
     return RandomNumberPage(page)
+
+@pytest.fixture
+def flaky_test_page(page: Page) -> FlakyTestPage:
+    return FlakyTestPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
