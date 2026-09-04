@@ -69,6 +69,7 @@ class HomePage:
         self.digest_authentication_button = page.locator('a[href="/digest-auth"].btn')
         self.random_number_button = page.locator('a[href="/random-number"].btn')
         self.flaky_test_button = page.locator('a[href="/flaky-test"].btn')
+        self.about_button = page.locator('a[href="/about"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -264,3 +265,6 @@ class HomePage:
 
     def click_flaky_test(self):
         self.flaky_test_button.click()
+    
+    def click_about(self):
+        self.about_button.click()
