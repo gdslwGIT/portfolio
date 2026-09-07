@@ -70,6 +70,7 @@ class HomePage:
         self.random_number_button = page.locator('a[href="/random-number"].btn')
         self.flaky_test_button = page.locator('a[href="/flaky-test"].btn')
         self.about_button = page.locator('a[href="/about"].btn')
+        self.webpark_button = page.locator('a[href="/webpark"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -268,3 +269,6 @@ class HomePage:
     
     def click_about(self):
         self.about_button.click()
+
+    def click_webpark(self):
+        self.webpark_button.click()
