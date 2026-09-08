@@ -71,6 +71,7 @@ from pages.random_number_page import RandomNumberPage
 from pages.flaky_test_page import FlakyTestPage
 from pages.about_page import AboutPage
 from pages.wbpark_page import WebparkPage
+from pages.bmi_page import BmiPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -351,6 +352,10 @@ def about_page(page: Page) -> AboutPage:
 @pytest.fixture
 def wbpark_page(page: Page) -> WebparkPage:
     return WebparkPage(page)
+
+@pytest.fixture
+def bmi_page(page: Page) -> BmiPage:
+    return BmiPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):

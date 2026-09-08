@@ -71,6 +71,7 @@ class HomePage:
         self.flaky_test_button = page.locator('a[href="/flaky-test"].btn')
         self.about_button = page.locator('a[href="/about"].btn')
         self.webpark_button = page.locator('a[href="/webpark"].btn')
+        self.bmi_button = page.locator('a[href="/bmi"].btn')
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -272,3 +273,6 @@ class HomePage:
 
     def click_webpark(self):
         self.webpark_button.click()
+
+    def click_bmi(self):
+        self.bmi_button.click()
