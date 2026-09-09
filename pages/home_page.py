@@ -72,7 +72,8 @@ class HomePage:
         self.about_button = page.locator('a[href="/about"].btn')
         self.webpark_button = page.locator('a[href="/webpark"].btn')
         self.bmi_button = page.locator('a[href="/bmi"].btn')
-
+        self.password_checker_button = page.locator('a[href="/secure-password-checker"].btn')
+        
     def click_web_inputs(self):
         self.web_inputs_button.click()
     
@@ -276,3 +277,6 @@ class HomePage:
 
     def click_bmi(self):
         self.bmi_button.click()
+
+    def click_password_checker(self):
+        self.password_checker_button.click()

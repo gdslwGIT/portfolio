@@ -72,6 +72,7 @@ from pages.flaky_test_page import FlakyTestPage
 from pages.about_page import AboutPage
 from pages.wbpark_page import WebparkPage
 from pages.bmi_page import BmiPage
+from pages.password_checker_page import PasswordCheckerPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -356,6 +357,10 @@ def wbpark_page(page: Page) -> WebparkPage:
 @pytest.fixture
 def bmi_page(page: Page) -> BmiPage:
     return BmiPage(page)
+
+@pytest.fixture
+def password_checker_page(page: Page) -> PasswordCheckerPage:
+    return PasswordCheckerPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
