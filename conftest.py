@@ -73,7 +73,7 @@ from pages.about_page import AboutPage
 from pages.wbpark_page import WebparkPage
 from pages.bmi_page import BmiPage
 from pages.password_checker_page import PasswordCheckerPage
-
+from pages.calorie_tracker_page import CalorieTrackerPage
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
     page.route("**/*google*", lambda route: route.continue_() if "expandtesting.com" in route.request.url else route.abort())
@@ -361,6 +361,10 @@ def bmi_page(page: Page) -> BmiPage:
 @pytest.fixture
 def password_checker_page(page: Page) -> PasswordCheckerPage:
     return PasswordCheckerPage(page)
+
+@pytest.fixture
+def calorie_tracker_page(page: Page) -> CalorieTrackerPage:
+    return CalorieTrackerPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
