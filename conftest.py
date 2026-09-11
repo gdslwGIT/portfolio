@@ -74,6 +74,8 @@ from pages.wbpark_page import WebparkPage
 from pages.bmi_page import BmiPage
 from pages.password_checker_page import PasswordCheckerPage
 from pages.calorie_tracker_page import CalorieTrackerPage
+from pages.color_wheel_page import ColorWheelPage
+
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
     page.route("**/*google*", lambda route: route.continue_() if "expandtesting.com" in route.request.url else route.abort())
@@ -365,6 +367,10 @@ def password_checker_page(page: Page) -> PasswordCheckerPage:
 @pytest.fixture
 def calorie_tracker_page(page: Page) -> CalorieTrackerPage:
     return CalorieTrackerPage(page)
+
+@pytest.fixture
+def color_wheel_page(page: Page) -> ColorWheelPage:
+    return ColorWheelPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
