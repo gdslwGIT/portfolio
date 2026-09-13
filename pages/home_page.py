@@ -76,6 +76,8 @@ class HomePage:
         self.calorie_tracker_button = page.locator('a[href="/tracalorie"].btn')
         self.color_wheel_button = page.locator('a[href="/color-wheel"].btn')
         self.bookstore_button = page.locator('a[href="/bookstore"].btn')
+        self.cars_button = page.locator('a[href="/cars"].btn')
+
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -292,3 +294,6 @@ class HomePage:
     
     def click_bookstore(self):
         self.bookstore_button.click()
+
+    def click_cars(self):
+        self.cars_button.click()

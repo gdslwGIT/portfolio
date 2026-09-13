@@ -76,6 +76,7 @@ from pages.password_checker_page import PasswordCheckerPage
 from pages.calorie_tracker_page import CalorieTrackerPage
 from pages.color_wheel_page import ColorWheelPage
 from pages.bookstore_page import BookstorePage
+from pages.cars_page import CarsPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -376,6 +377,10 @@ def color_wheel_page(page: Page) -> ColorWheelPage:
 @pytest.fixture
 def bookstore_page(page: Page) -> BookstorePage:
     return BookstorePage(page)
+
+@pytest.fixture
+def cars_page(page: Page) -> CarsPage:
+    return CarsPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
