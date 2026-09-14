@@ -77,6 +77,7 @@ from pages.calorie_tracker_page import CalorieTrackerPage
 from pages.color_wheel_page import ColorWheelPage
 from pages.bookstore_page import BookstorePage
 from pages.cars_page import CarsPage
+from pages.api_docs_page import ApiDocsPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -381,6 +382,10 @@ def bookstore_page(page: Page) -> BookstorePage:
 @pytest.fixture
 def cars_page(page: Page) -> CarsPage:
     return CarsPage(page)
+
+@pytest.fixture
+def api_docs_page(page: Page) -> ApiDocsPage:
+    return ApiDocsPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):

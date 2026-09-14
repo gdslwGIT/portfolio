@@ -77,6 +77,8 @@ class HomePage:
         self.color_wheel_button = page.locator('a[href="/color-wheel"].btn')
         self.bookstore_button = page.locator('a[href="/bookstore"].btn')
         self.cars_button = page.locator('a[href="/cars"].btn')
+        self.api_docs_button = page.locator('a[href="/notes/api/api-docs/"]').first
+
 
 
     def click_web_inputs(self):
@@ -297,3 +299,6 @@ class HomePage:
 
     def click_cars(self):
         self.cars_button.click()
+
+    def click_api_docs(self):
+        self.api_docs_button.click()
