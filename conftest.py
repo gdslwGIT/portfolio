@@ -78,6 +78,7 @@ from pages.color_wheel_page import ColorWheelPage
 from pages.bookstore_page import BookstorePage
 from pages.cars_page import CarsPage
 from pages.api_docs_page import ApiDocsPage
+from pages.practice_api_docs_page import PracticeApiDocsPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -386,6 +387,10 @@ def cars_page(page: Page) -> CarsPage:
 @pytest.fixture
 def api_docs_page(page: Page) -> ApiDocsPage:
     return ApiDocsPage(page)
+
+@pytest.fixture
+def practice_api_docs_page(page: Page) -> PracticeApiDocsPage:
+    return PracticeApiDocsPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):

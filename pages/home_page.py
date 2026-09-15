@@ -78,6 +78,7 @@ class HomePage:
         self.bookstore_button = page.locator('a[href="/bookstore"].btn')
         self.cars_button = page.locator('a[href="/cars"].btn')
         self.api_docs_button = page.locator('a[href="/notes/api/api-docs/"]').first
+        self.practice_api_docs_button = page.locator('a[href="/api/api-docs/"]').first
 
 
 
@@ -302,3 +303,6 @@ class HomePage:
 
     def click_api_docs(self):
         self.api_docs_button.click()
+
+    def click_practice_api_docs(self):
+        self.practice_api_docs_button.click()
