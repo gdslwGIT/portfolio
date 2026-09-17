@@ -80,6 +80,7 @@ from pages.cars_page import CarsPage
 from pages.api_docs_page import ApiDocsPage
 from pages.practice_api_docs_page import PracticeApiDocsPage
 from pages.api_endpoints_page import ApiEndpointsPage
+from pages.should_be_page import ShouldBePage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -396,6 +397,10 @@ def practice_api_docs_page(page: Page) -> PracticeApiDocsPage:
 @pytest.fixture
 def api_endpoints_page(page: Page) -> ApiEndpointsPage:
     return ApiEndpointsPage(page)
+
+@pytest.fixture
+def should_be_page(page: Page) -> ShouldBePage:
+    return ShouldBePage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
