@@ -81,6 +81,7 @@ from pages.api_docs_page import ApiDocsPage
 from pages.practice_api_docs_page import PracticeApiDocsPage
 from pages.api_endpoints_page import ApiEndpointsPage
 from pages.should_be_page import ShouldBePage
+from pages.should_have_page import ShouldHavePage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -401,6 +402,10 @@ def api_endpoints_page(page: Page) -> ApiEndpointsPage:
 @pytest.fixture
 def should_be_page(page: Page) -> ShouldBePage:
     return ShouldBePage(page)
+
+@pytest.fixture
+def should_have_page(page: Page) -> ShouldHavePage:
+    return ShouldHavePage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):

@@ -82,6 +82,7 @@ class HomePage:
         self.health_check_button = page.locator('a[href="/api/health-check"]').first
         self.my_ip_api_button = page.locator('a[href="/api/my-ip/"]').first
         self.should_be_button = page.locator('a[href="/assertions/should-be"]').first
+        self.should_have_button = page.locator('a[href="/assertions/should-have"]').first
 
 
     def click_web_inputs(self):
@@ -317,3 +318,6 @@ class HomePage:
 
     def click_should_be(self):
         self.should_be_button.click()
+
+    def click_should_have(self):
+        self.should_have_button.click()
