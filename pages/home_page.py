@@ -84,6 +84,7 @@ class HomePage:
         self.should_be_button = page.locator('a[href="/assertions/should-be"]').first
         self.should_have_button = page.locator('a[href="/assertions/should-have"]').first
         self.should_equal_button = page.locator('a[href="/assertions/should-equal"]').first
+        self.should_match_button = page.locator('a[href="/assertions/should-match"]').first
 
 
     def click_web_inputs(self):
@@ -325,3 +326,6 @@ class HomePage:
         
     def click_should_equal(self):
         self.should_equal_button.click()
+
+    def click_should_match(self):
+        self.should_match_button.click()
