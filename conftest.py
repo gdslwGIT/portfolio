@@ -86,6 +86,7 @@ from pages.should_equal_page import ShouldEqualPage
 from pages.should_match_page import ShouldMatchPage
 from pages.should_contain_page import ShouldContainPage
 from pages.should_include_page import ShouldIncludePage
+from pages.should_exist_page import ShouldExistPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -426,6 +427,10 @@ def should_contain_page(page: Page) -> ShouldContainPage:
 @pytest.fixture
 def should_include_page(page: Page) -> ShouldIncludePage:
     return ShouldIncludePage(page)
+
+@pytest.fixture
+def should_exist_page(page: Page) -> ShouldExistPage:
+    return ShouldExistPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
