@@ -89,6 +89,7 @@ class HomePage:
         self.should_include_button = page.locator('a[href="/assertions/should-include"]').first
         self.should_exist_button = page.locator('a[href="/assertions/should-exist"]').first
         self.mochawesome_reports_button = page.locator('a[href="/mochawesome-reports"]').first
+        self.mocha_player_button = page.locator('a[href="/mocha-chai-sinon-player"]').first
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -344,4 +345,7 @@ class HomePage:
     
     def click_mochawesome_reports(self):
         self.mochawesome_reports_button.click()
+
+    def click_mocha_player(self):
+        self.mocha_player_button.click()
         

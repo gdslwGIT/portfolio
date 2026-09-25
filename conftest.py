@@ -88,6 +88,7 @@ from pages.should_contain_page import ShouldContainPage
 from pages.should_include_page import ShouldIncludePage
 from pages.should_exist_page import ShouldExistPage
 from pages.mochawesome_reports_page import MochawesomeReportsPage
+from pages.mocha_player_page import MochaPlayerPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -436,6 +437,10 @@ def should_exist_page(page: Page) -> ShouldExistPage:
 @pytest.fixture
 def mochawesome_reports_page(page: Page) -> MochawesomeReportsPage:
     return MochawesomeReportsPage(page)
+
+@pytest.fixture
+def mocha_player_page(page: Page) -> MochaPlayerPage:
+    return MochaPlayerPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
