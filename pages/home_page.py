@@ -90,6 +90,7 @@ class HomePage:
         self.should_exist_button = page.locator('a[href="/assertions/should-exist"]').first
         self.mochawesome_reports_button = page.locator('a[href="/mochawesome-reports"]').first
         self.mocha_player_button = page.locator('a[href="/mocha-chai-sinon-player"]').first
+        self.xpath_css_tester_button = page.locator('a[href="/xpath-css-tester"]').first
 
     def click_web_inputs(self):
         self.web_inputs_button.click()
@@ -348,4 +349,7 @@ class HomePage:
 
     def click_mocha_player(self):
         self.mocha_player_button.click()
+
+    def click_xpath_css_tester(self):
+        self.xpath_css_tester_button.click()
         

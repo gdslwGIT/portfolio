@@ -89,6 +89,7 @@ from pages.should_include_page import ShouldIncludePage
 from pages.should_exist_page import ShouldExistPage
 from pages.mochawesome_reports_page import MochawesomeReportsPage
 from pages.mocha_player_page import MochaPlayerPage
+from pages.xpath_css_tester_page import XpathCssTesterPage
 
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
@@ -441,6 +442,10 @@ def mochawesome_reports_page(page: Page) -> MochawesomeReportsPage:
 @pytest.fixture
 def mocha_player_page(page: Page) -> MochaPlayerPage:
     return MochaPlayerPage(page)
+
+@pytest.fixture
+def xpath_css_tester_page(page: Page) -> XpathCssTesterPage:
+    return XpathCssTesterPage(page)
 
 @pytest.fixture
 def browser_context_args(browser_context_args):
