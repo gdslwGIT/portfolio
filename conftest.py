@@ -90,7 +90,7 @@ from pages.should_exist_page import ShouldExistPage
 from pages.mochawesome_reports_page import MochawesomeReportsPage
 from pages.mocha_player_page import MochaPlayerPage
 from pages.xpath_css_tester_page import XpathCssTesterPage
-
+from api.notes_api import NotesApiClient
 @pytest.fixture(autouse=True)
 def open_site(page: Page):
     page.route("**/*google*", lambda route: route.continue_() if "expandtesting.com" in route.request.url else route.abort())
@@ -485,3 +485,6 @@ class GuerillaMail:
         raise TimeoutError("No mail received within timeout")
     
     
+@pytest.fixture
+def notes_api(page:Page) -> NotesApiClient:
+    return NotesApiClient(page.request)
